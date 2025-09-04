@@ -1,0 +1,14 @@
+# Goal
+为 Playground 新增一个场景 在本机实现【消费 Binlog 清理Redis 和 localcache】
+
+# Constraint
+0. 每次执行任务前重复读取 blueprint.text
+1. 按照指令执行 TODO 中的任务，每次只完成一个任务，完成后标记Done
+2. 代码必须可以直接运行，真实地调用外部中间组件，禁止使用 mock 来模拟
+3. 每次任务聚焦核心部分，需要外部依赖的地方只创建对应的接口而不立刻实现，等待下一条 TODO 来实现
+
+# TODO
+1. [Done] 依据注释定义和实现 `Actions` `ExecuteAction` 方法
+2. [Done] 实现 `processCDCEvent` 中的 TODO
+3. [Done] 创建 `binlog_listener.go` 的测试函数 需要直接链接本地 mysql
+4. [TODO] 全面检查代码 在本机进行测试
